@@ -4,8 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Register {
 
-    public static void main (String[] args)
-    {
+    public static void main (String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
@@ -33,6 +32,7 @@ public class Register {
         driver.findElement(By.xpath("//input[@name='postalCode']")).sendKeys("7580");
 
         driver.findElement(By.xpath("//select[@name='country']")).sendKeys("SOUTH AFRICA");
+        Thread.sleep(5000);
 
         driver.findElement(By.xpath("//input[@id='email']")).sendKeys("Asie");
 
